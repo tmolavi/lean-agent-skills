@@ -45,7 +45,8 @@ rm -f "$record"
 
 # tidy up empty parent dirs we may have left behind
 for d in "$base/.agents/skills" "$base/.agents" "$base/.claude" \
-         "$base/.cursor/skills" "$base/.cursor" "$base/.gemini/skills" "$base/.gemini"; do
+         "$base/.cursor/skills" "$base/.cursor" "$base/.gemini/skills" "$base/.gemini" \
+         "$base/.github/skills" "$base/.copilot/skills" "$base/.copilot"; do
   [[ -d "$d" ]] && find "$d" -maxdepth 0 -empty -exec rmdir {} \; 2>/dev/null || true
 done
 

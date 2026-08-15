@@ -11,6 +11,7 @@ targets:
   claude:      { project: .claude/skills,   global: ~/.claude/skills, dedupe: symlink }
   antigravity: { project: .agents/skills,   global: ~/.gemini/antigravity/skills }
   cursor:      { project: .cursor/skills,   global: ~/.cursor/skills }
+  copilot:     { project: .github/skills,   global: ~/.copilot/skills }
   gemini:      { project: .gemini/skills,   global: ~/.gemini/skills }
 
 sources:

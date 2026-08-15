@@ -13,7 +13,7 @@ DEST="."
 GLOBAL=0
 DRY_RUN=0
 FORCE=0
-AGENTS="codex,claude,antigravity"
+AGENTS="codex,claude,antigravity,copilot"
 
 usage() {
   cat <<'EOF'
@@ -22,8 +22,8 @@ Lean Agent Skills installer
 Options:
   --dest DIR     base directory for project install (default: current dir)
   --global       install into home directories instead
-  --agents LIST  comma list: codex,claude,antigravity,cursor,gemini
-                 (default: codex,claude,antigravity)
+  --agents LIST  comma list: codex,claude,antigravity,cursor,copilot,gemini
+                 (default: codex,claude,antigravity,copilot)
   --dry-run      show what would happen
   --force        overwrite existing AGENTS.md
   -h, --help     this help
@@ -117,6 +117,8 @@ agent_dir() {
       (( GLOBAL )) && echo "$HOME/.claude/skills" || echo "$DEST/.claude/skills" ;;
     cursor)
       (( GLOBAL )) && echo "$HOME/.cursor/skills" || echo "$DEST/.cursor/skills" ;;
+    copilot)
+      (( GLOBAL )) && echo "$HOME/.copilot/skills" || echo "$DEST/.github/skills" ;;
     gemini)
       (( GLOBAL )) && echo "$HOME/.gemini/skills" || echo "$DEST/.gemini/skills" ;;
     *) warn "unknown agent: $agent"; return 1 ;;

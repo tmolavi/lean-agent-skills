@@ -61,7 +61,8 @@ That's it. Start a new turn in your agent — skills are discovered automaticall
 ```
 --dest DIR      base directory for the project install (default: current dir)
 --global        install into your home directories instead
---agents LIST   codex,claude,antigravity,cursor,gemini (default: codex,claude,antigravity)
+--agents LIST   codex,claude,antigravity,cursor,copilot,gemini
+                (default: codex,claude,antigravity,copilot)
 --dry-run       show what would happen
 --force         overwrite an existing AGENTS.md
 ```
