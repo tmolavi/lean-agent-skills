@@ -1,0 +1,47 @@
+# Lean Agent Skills — machine-readable curated catalog
+# install.sh reads equivalent config; this file documents it for humans & tools.
+
+name: lean-agent-skills
+version: 1.0.0
+standard: https://agentskills.io
+goal: Reduce token usage of AI coding agents without losing output quality.
+
+targets:
+  codex:       { project: .agents/skills,   global: ~/.agents/skills }
+  claude:      { project: .claude/skills,   global: ~/.claude/skills, dedupe: symlink }
+  antigravity: { project: .agents/skills,   global: ~/.gemini/antigravity/skills }
+  cursor:      { project: .cursor/skills,   global: ~/.cursor/skills }
+  gemini:      { project: .gemini/skills,   global: ~/.gemini/skills }
+
+sources:
+  - repo: anthropics/skills
+    mode: pick
+    subdir: skills
+    skills: [skill-creator, docx, pdf, pptx, xlsx]
+    reason: >
+      Official Anthropic catalog. Document skills delegate work to scripts
+      (zero LLM tokens); skill-creator teaches correct skill authoring.
+
+  - repo: openai/skills
+    mode: all
+    subdir: skills/.curated
+    exclude: [hatch-pet, yeet]
+    reason: >
+      Official Codex curated catalog — vetted workflows (gh-fix-ci,
+      gh-address-comments, define-goal, security review, playwright,
+      deploys, Notion, Linear, Figma...). Repo is deprecated in favor of
+      openai/plugins but skills remain valid.
+
+  - repo: multica-ai/andrej-karpathy-skills
+    mode: auto
+    reason: >
+      Karpathy-inspired behavioral guidelines — surgical changes,
+      simplicity, verifiable success criteria. The quality guardrail.
+
+  - repo: hqhq1025/skill-optimizer
+    mode: auto
+    reason: >
+      skill-miner turns your own session history into skills;
+      skill-generalizer/skill-personalizer keep the set lean and personal.
+
+rules_template: templates/AGENTS.md
