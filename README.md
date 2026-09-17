@@ -149,16 +149,20 @@ Anything implementing the open Agent Skills standard — Claude Code, Codex, Ant
 
 Propose a skill, report a broken upstream link, or improve the frugal rules. Quality bar is in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## ⭐ If this saves you tokens, star it
+## 🔗 Related Projects
 
-Stars are how other developers find this. If Lean Agent Skills saved you even one dollar of tokens, hit ⭐ — it takes one second and keeps the project visible.
+Part of the **Molavi AI Engineering Ecosystem**:
 
-## 👤 Author
+* [**mcp-agent-skills-hub**](https://github.com/tmolavi/mcp-agent-skills-hub): Curated production agent skills catalog.
+* [**n8n-agent-skills**](https://github.com/tmolavi/n8n-agent-skills): Production n8n agent workflow architecture.
+* [**agent-project-discovery-skill**](https://github.com/tmolavi/agent-project-discovery-skill): Codebase startup & context discovery skill.
+* [**geo-scope**](https://github.com/tmolavi/geo-scope): Multi-model empirical AI visibility benchmark engine.
+* [**Ecosystem Map**](https://github.com/tmolavi/geo-scope/blob/main/docs/GITHUB_ECOSYSTEM.md): Complete architecture and evidence flow.
 
-**Taghi Molavi** ([@tmolavi](https://github.com/tmolavi))
+---
 
-Built in the open, for every developer tired of watching context windows burn.
+## 👤 Author & License
 
-## 📄 License
-
+Developed by **Taghi Molavi** — [molavi.pro](https://molavi.pro)  
 MIT — see [LICENSE](LICENSE). All skills belong to their respective upstream authors and licenses; this repository selects, organizes and installs them.
+
